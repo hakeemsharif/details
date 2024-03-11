@@ -1,0 +1,36 @@
+.error-page{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    text-align: center;
+  }
+
+  h1{
+    color: #39FF14;
+    font-family: "Spinner";
+    font-size: 2.986rem;
+    text-align: center;
+  }
+
+  button{
+    font-family: "Lora", serif;
+    background-color: black;
+    border: 2px solid  #39FF14;
+    color: #39FF14;
+    padding: 10px 50px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 10px;
+}

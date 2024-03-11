@@ -1,0 +1,55 @@
+@media screen and (max-width: 1070px) {
+  .navbar {
+    display: none !important; }
+
+  .mobile-nav {
+    display: block !important;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    box-shadow: 0px -16px 28px -3px rgba(0, 0, 0, 0.1); }
+    .mobile-nav .navbar-link-mobile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .mobile-nav .navbar-link-mobile img {
+        max-width: 25px; } }
+nav {
+  position: absolute;
+  z-index: 1337;
+  width: 100%; }
+
+.mobile-nav {
+  display: none; }
+
+.navbar {
+  max-width: 1800px;
+  padding: 30px 38px 0 36px;
+  margin: 0 auto;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lora", serif; }
+  .navbar .navbar-logo img {
+    max-width: 210px; }
+  .navbar .navbar-link {
+    text-transform: uppercase; }
+  .navbar .navbar-link, .navbar .navbar-weather {
+    font-weight: bold;
+    color: #FFFFFF; }
+    .navbar .navbar-link ul, .navbar .navbar-weather ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .navbar .navbar-link ul a, .navbar .navbar-weather ul a {
+        display: inline-block;
+        padding: 0px 15px;
+        text-decoration: none;
+        color: white; }
+      .navbar .navbar-link ul a.active, .navbar .navbar-link ul a:hover, .navbar .navbar-weather ul a.active, .navbar .navbar-weather ul a:hover {
+        color: #39FF14; }
+
+/*# sourceMappingURL=nav.css.map */

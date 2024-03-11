@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Spinner";
+    src: url("../styles/SpinnerGothicTrial-Bold-BF65ea73052ddb1.otf");
+}
+
+@media screen and (orientation:landscape) { 
+    
+    .category-cover-img {
+        height: 100vh;
+      }
+}
+
+@media screen and (orientation:portrait) { 
+    
+    .category-cover-img {
+        height: 100vh;
+    }
+
+    .category-cover-img {
+        
+        h1{
+            font-size: 1.728rem !important;
+        }   
+    }
+}
+
+.category-cover-img {
+    width: 100%;
+
+    h1{
+        display: grid;
+        place-items: center;
+        z-index:5;
+        font-family: "Spinner" !important;
+        text-transform: uppercase;
+        font-size: 2.986rem;
+        color: #39FF14;
+        text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.96);
+    }
+}
+
+.category-cover-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.cover-info{
+    display: grid;
+    place-items: center;
+    position: absolute; 
+    bottom: 0; 
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    h1{
+        font-family: "medium";
+        font-size: 2.488rem;
+        text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.96);
+        padding: 0 20px 0 20px;
+    }
+}
+
+.cover-info-nav{
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            font-family: "Lora", serif;
+            text-transform: uppercase;
+            color: #39FF14;
+            display: inline-block;
+            padding: 0px 15px;
+        }
+    }
+}
