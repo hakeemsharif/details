@@ -1,4 +1,4 @@
-# OPAC-LMS
+# Details.
 
 A news website concept built using React.js for frontend and Strapi for CMS
 
