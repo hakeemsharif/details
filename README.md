@@ -1,8 +1,23 @@
-# React + Vite
+# OPAC-LMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A news website concept built using React.js for frontend and Strapi for CMS
 
-Currently, two official plugins are available:
+# Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ReactJS
+- Strapi CMS
+- SQLite
+- SCSS
+- SwiperJS
+
+# Status
+
+Completed
+
+# Upcoming updates
+
+1. Button Link for each category header in Home Page.
+2. To Fix Random Error while navigation thru categories.
+3. Photo of the day feature
+4. Nav Weather
+5. ....and more (i guess)
