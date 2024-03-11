@@ -1,4 +1,4 @@
-// import useImageFetch from '../hooks/useImageFetch';
+// import useImageFetch from '../hooks/useImageFetch';article
 import '../assets/styles/home.css'
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -26,7 +26,8 @@ export default function Homepage() {
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                     {data.slice(0, 3).map((featured) => (
                         <SwiperSlide key={featured.id}>
-                            <img src={"https://details-cms-api.onrender.com" + featured.attributes.cover.data.attributes.url} alt="" />
+                            {/* <img src={"http://localhost:1337" + featured.attributes.cover.data.attributes.url} alt="" /> */}
+                            <img src={featured.attributes.coverurl} alt="" />
                             <div className="featured-info">
                                     <div className="subtitles">
                                         <h1>{featured.attributes.title}</h1>
@@ -50,7 +51,8 @@ export default function Homepage() {
                             <div key={article.id} className="ln-card">
 
                                 <div className="ln-card-cover">
-                                    <img src={"https://details-cms-api.onrender.com" + article.attributes.cover.data.attributes.url} alt="" />
+                                    {/* <img src={"http://localhost:1337" + article.attributes.cover.data.attributes.url} alt="" /> */}
+                                    <img src={article.attributes.coverurl} alt="" />
                                 </div>
 
                                 <div className="ln-card-content">
@@ -85,7 +87,8 @@ export default function Homepage() {
                             <div key={pick.id} className="editors-card">
                                 
                                 <div className="editors-card-cover">
-                                    <img src={"https://details-cms-api.onrender.com" + pick.attributes.cover.data.attributes.url} alt="" />
+                                    {/* <img src={"http://localhost:1337" + pick.attributes.cover.data.attributes.url} alt="" /> */}
+                                    <img src={pick.attributes.coverurl} alt="" />
                                 </div>
 
                                 <div className="editors-card-content">
@@ -97,7 +100,7 @@ export default function Homepage() {
                                         <div className="editors-card-content-body">
                                             <h3>{pick.attributes.title}</h3>
                                             {pick.attributes.body && pick.attributes.body[0] && (
-                                            <p>{pick.attributes.body[0].children[0].text.slice(0, 350)}... <Link to ={`${pick.attributes.categories.data[0].attributes.Name.toLowerCase()}/details/${pick.id}`}>Read More</Link></p>
+                                                <p>{pick.attributes.body[0].children[0].text.slice(0, 350)}... <Link to ={`${pick.attributes.categories.data[0].attributes.Name.toLowerCase()}/details/${pick.id}`}>Read More</Link></p>
                                             )}
                                         </div>
                                     </div>

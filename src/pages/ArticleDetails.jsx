@@ -18,7 +18,8 @@ export default function ArticleDetails() {
 
             <section>
                 <div className="news-cover-img">
-                    <img src={"https://details-cms-api.onrender.com" + data.attributes.cover.data.attributes.url} alt="" />
+                    {/* <img src={"http://localhost:1337" + data.attributes.cover.data.attributes.url} alt="" /> */}
+                    <img src={data.attributes.coverurl} alt="" />
                     <div className="slide-info">
                         <h1>{data.attributes.title}</h1>
                     </div>

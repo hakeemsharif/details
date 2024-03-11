@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import useFetch from './hooks/useFetch'
 import PageNotFound from './pages/PageNotFound'
 import ErrorLoading from './pages/ErrorLoading'
+import MainLoading from './components/MainLoading';
 // const client = new ApolloClient({
 //   uri: 'https://localhost:1337/graphql',
 //   cache: new InMemoryCache()
@@ -18,7 +19,7 @@ function App() {
 
   const { data, loading, error } = useFetch('https://details-cms-api.onrender.com/api/categories')
 
-  if(loading) return <p>Loading...</p>
+  if(loading) return <MainLoading />
   if(error) return <ErrorLoading />
 
   return (
