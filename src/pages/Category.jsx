@@ -29,10 +29,10 @@ export default function Category() {
             <section>
                 <div className="category-cover-img">
                 {/* <img src={"http://localhost:1337" + getCategory.attributes?.cover.data.attributes.url } alt="" /> */}
-                <img src={getCategory.attributes?.coverurl} alt="" />
+                    <img src={getCategory.attributes?.coverurl} alt="" />
                     <div className="cover-info">
                           <div className="cover-info-nav">
-                          <h1>{data.attributes?.Name}</h1>
+                            <h1>{data.attributes?.Name}</h1>
                          </div>
                     </div>  
                 </div>

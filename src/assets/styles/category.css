@@ -6,12 +6,13 @@
     height: 100vh; } }
 @media screen and (orientation: portrait) {
   .category-cover-img {
-    height: 100vh; }
+    height: 50vh; }
 
   .category-cover-img h1 {
     font-size: 1.728rem !important; } }
 .category-cover-img {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .category-cover-img h1 {
     display: grid;
     place-items: center;
@@ -35,9 +36,10 @@
   display: grid;
   place-items: center;
   position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
   text-align: center; }
   .cover-info h1 {
     font-family: "medium";

@@ -1,6 +1,11 @@
+@media screen and (orientation: landscape) {
+  .gradient-loading {
+    height: 100vh; } }
+@media screen and (orientation: portrait) {
+  .gradient-loading {
+    height: 50vh; } }
 .gradient-loading {
   width: 100%;
-  height: 100vh;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 20px; }

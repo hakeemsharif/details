@@ -13,7 +13,7 @@
 @media screen and (orientation:portrait) { 
     
     .category-cover-img {
-        height: 100vh;
+        height: 50vh;
     }
 
     .category-cover-img {
@@ -26,7 +26,7 @@
 
 .category-cover-img {
     width: 100%;
-
+    position: relative;
     h1{
         display: grid;
         place-items: center;
@@ -52,10 +52,13 @@
 .cover-info{
     display: grid;
     place-items: center;
-    position: absolute; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     bottom: 0; 
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     text-align: center;
 
     h1{
