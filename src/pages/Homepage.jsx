@@ -8,17 +8,20 @@ import { Link } from 'react-router-dom'
 import moment from 'moment'
 import { Navigation } from 'swiper/modules';
 import ErrorLoading from './ErrorLoading';
+import GradientLoading from '../components/GradientLoading';
+// import MainLoading from '../components/MainLoading';
 
 export default function Homepage() {
 
     const { loading, data, error } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*')
-    const { data: editorspickData } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=' + "Editor's Pick")
-    const { data: politicsData } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=Politics')
-    const { data: businessData } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=Business')
-    const { data: sportsData } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=Sports') 
+    const { data: editorspickData, loading: editorloading} = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=' + "Editor's Pick")
+    const { data: politicsData, loading: politicsLoading } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=Politics')
+    const { data: businessData, loading: businessLoading } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=Business')
+    const { data: sportsData, loading: sportsLoading } = useFetch('https://details-cms-api.onrender.com/api/articles?populate=*&filters[categories][Name][$contains]=Sports') 
 
-    if(loading) return <p>Loading...</p>
-    if(error) return <ErrorLoading />
+    if (loading, editorloading, politicsLoading, businessLoading, sportsLoading) return <GradientLoading />
+
+    if (error) return <ErrorLoading />
 
     return (
         <main>

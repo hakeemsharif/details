@@ -9,7 +9,8 @@ export default function ArticleDetails() {
   const { id } = useParams()
   const  { loading, data, error } = useFetch('https://details-cms-api.onrender.com/api/articles/' + id + '?populate=*')
 
-  if(loading) return <p>Loading...</p>
+  // if(loading) return <p>Loading...</p>
+  if(loading) return
   if(error) return <ErrorLoading />
 
   return (

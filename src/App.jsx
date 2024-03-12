@@ -19,7 +19,12 @@ function App() {
 
   const { data, loading, error } = useFetch('https://details-cms-api.onrender.com/api/categories')
 
-  if(loading) return <MainLoading />
+  // if(loading) return <MainLoading />
+  if (loading) {
+    setTimeout(() => {
+      return <MainLoading />;
+    }, 1000);
+  }
   if(error) return <ErrorLoading />
 
   return (

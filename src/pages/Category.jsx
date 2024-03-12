@@ -5,13 +5,23 @@ import useFetch from '../hooks/useFetch'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
 import ErrorLoading from './ErrorLoading'
+import GradientLoading from '../components/GradientLoading'
+
 export default function Category() {
 
-  const { id } = useParams()
+  
+  const { id } = useParams();
   const { loading, data, error } = useFetch('https://details-cms-api.onrender.com/api/categories/' + id + '?populate[articles][populate]=*')
   const { data: getCategory, loading: getLoading, error: getError } = useFetch('https://details-cms-api.onrender.com/api/categories/' + id + '?populate=*')
 
-  if(loading, getLoading) return <p>Loading...</p>
+  // if(loading || getLoading) return <GradientLoading />
+
+  if (loading || getLoading) {
+    setTimeout(() => {
+      return <GradientLoading />;
+    }, 1000);
+  }
+
   if(error, getError) return <ErrorLoading />
 
   return (

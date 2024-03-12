@@ -16,7 +16,13 @@ export default function Nav() {
 
     const { loading, data, error } = useFetch('https://details-cms-api.onrender.com/api/categories')
     
-    if (loading) return <MainLoading />
+    if (loading) {
+        setTimeout(() => {
+          return <MainLoading />
+        }, 1000);
+      }
+
+    // if (loading) return <MainLoading />
     if(error) return <ErrorLoading />
 
   return (
