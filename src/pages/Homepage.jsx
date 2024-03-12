@@ -9,7 +9,7 @@ import moment from 'moment'
 import { Navigation } from 'swiper/modules';
 import ErrorLoading from './ErrorLoading';
 import GradientLoading from '../components/GradientLoading';
-// import MainLoading from '../components/MainLoading';
+import MainLoading from '../components/MainLoading';
 
 export default function Homepage() {
 
